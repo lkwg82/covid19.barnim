@@ -9,10 +9,11 @@ jobs:
         with:
           node-version: '17'
       - run: npm install
+      - run: npm run build
       - run: npm run serve &
       - name: Lighthouse
         uses: foo-software/lighthouse-check-action@v7.1.0
         with:
           gitHubAccessToken: ${{ secrets.GITHUB_TOKEN }}
-          urls: 'https://lkwg82.github.io/covid19.barnim/,http://localhost:5000/'
-      - run: curl -v http://localhost:5000/
+          urls: 'https://lkwg82.github.io/covid19.barnim/,http://localhost:5000/covid19.barnim/'
+      - run: curl -v http://localhost:5000/covid19.barnim/
