@@ -2,9 +2,9 @@
   "name": "covid19.barnim",
   "license": "Apache-2.0",
   "scripts": {
-    "deploy": "node scripts/gh-pages-deploy.js",
+    "deploy": "scripts/gh-pages-deploy.sh",
     "dev": "vite --host",
-    "build": "vite build",
+    "build": "vite build --base /covid19.barnim",
     "serve": "vite preview"
   },
   "dependencies": {
