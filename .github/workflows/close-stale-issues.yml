@@ -1,0 +1,15 @@
+# https://github.com/marketplace/actions/close-stale-issues
+name: 'Close stale issues and PRs'
+
+on:
+  schedule:
+    - cron: '22 9 * * *'
+
+jobs:
+  stale:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/stale@v4
+        with:
+          stale-issue-message: 'Message to comment on stale issues. If none provided, will not mark issues stale'
+          stale-pr-message: 'Message to comment on stale PRs. If none provided, will not mark PRs stale'
