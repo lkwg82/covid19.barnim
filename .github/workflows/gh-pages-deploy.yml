@@ -1,20 +1,20 @@
 name: Deploy to Github Pages
-  on:
-    push:
+on:
+  push:
 #      branches:
 #        - main
-  jobs:
-    gh-pages-deploy:
-      name: Deploying to Github Pages
-      runs-on: ubuntu-latest
-      steps:
-        - uses: actions/checkout@v2
-        - uses: actions/setup-node@v2
-          with:
-            node-version: '17'
-        - name: Install packages
-          run: npm install
-        - name: Set Creds
-          run: git config user.name "deployer" && git config user.email "deploy@mail.com"
-        - name: Deploy
-          run: npm run deploy
+jobs:
+  gh-pages-deploy:
+    name: Deploying to Github Pages
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '17'
+      - name: Install packages
+        run: npm install
+      - name: Set Creds
+        run: git config user.name "deployer" && git config user.email "deploy@mail.com"
+      - name: Deploy
+        run: npm run deploy
