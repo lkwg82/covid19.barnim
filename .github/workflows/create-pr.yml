@@ -8,6 +8,7 @@ jobs:
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v3
         with:
+          branch: $GITHUB_REF_NAME
           delete-branch: true
           title: $GITHUB_REF_NAME
           draft: true
