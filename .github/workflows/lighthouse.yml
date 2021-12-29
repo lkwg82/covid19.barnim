@@ -15,5 +15,4 @@ jobs:
       - name: Lighthouse
         uses: foo-software/lighthouse-check-action@v7.1.0
         with:
-          gitHubAccessToken: ${{ GITHUB_TOKEN }}
           urls: 'https://lkwg82.github.io/covid19.barnim/,http://localhost:5000'
