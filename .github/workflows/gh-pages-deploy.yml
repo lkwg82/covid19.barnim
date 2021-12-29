@@ -1,8 +1,8 @@
 name: Deploy to Github Pages
 on:
   push:
-    branches:
-      - main
+#    branches:
+#      - main
 jobs:
   gh-pages-deploy:
     name: Deploying to Github Pages
@@ -16,5 +16,9 @@ jobs:
         run: npm install
       - name: Set Creds
         run: git config user.name "deployer" && git config user.email "deploy@mail.com"
+      - name: set update time
+        run: >
+          update=$(date +"%Y.%m.%d %H:%M");
+          sed -e 's|#GeradeEben#|'$update'|' -i src/App.vue
       - name: Deploy
         run: npm run deploy
