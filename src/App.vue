@@ -1,3 +1,6 @@
+<script setup>
+import Home from "@/views/Home.vue";
+</script>
 <template>
   <div class="flex flex-col h-screen">
     <header class="bg-white shadow">
@@ -8,7 +11,7 @@
       </div>
     </header>
     <main>
-      <router-view />
+      <Home/>
     </main>
     <footer
       class="fixed inset-x-0 bottom-0 bg-red py-3 px-5 text-white font-bold"
