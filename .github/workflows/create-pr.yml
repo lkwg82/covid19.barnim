@@ -1,0 +1,13 @@
+name: automatic create PR
+on: [push]
+jobs:
+   build:
+      runs-on: ubuntu-latest
+      steps:
+      - uses: actions/checkout@v2
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v3
+        with:
+          delete-branch: true
+          title: $GITHUB_REF_NAME
+          draft: true
