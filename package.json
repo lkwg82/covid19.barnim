@@ -4,7 +4,7 @@
   "scripts": {
     "deploy": "scripts/gh-pages-deploy.sh",
     "dev": "vite --host",
-    "build": "vite build --base /covid19.barnim",
+    "build": "vite build --base /covid19.barnim/",
     "serve": "vite preview"
   },
   "dependencies": {
