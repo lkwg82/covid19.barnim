@@ -1,4 +1,4 @@
-name: Build and test Globfs  
+name: package site  
 on: [push]  
 jobs:
    build:
