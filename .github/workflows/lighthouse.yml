@@ -1,4 +1,4 @@
-name: package site  
+name: performance tests
 on: [push]  
 jobs:
    lighthouse:
