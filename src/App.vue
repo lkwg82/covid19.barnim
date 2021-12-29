@@ -11,16 +11,19 @@ import Home from "@/views/Home.vue";
       </div>
     </header>
     <main>
-      <Home/>
+      <Home />
     </main>
-    <footer
-      class="fixed inset-x-0 bottom-0 bg-red py-3 px-5 text-white font-bold"
-    >
-      <a
-        href="https://github.com/lkwg82/covid19.barnim"
-        target="https://github.com/lkwg82/covid19.barnim"
-        >Über diese Seite</a
-      >
+    <footer class="fixed inset-x-0 bottom-0 bg-red py-3 px-5 text-white">
+      <div class="flow-root">
+        <p class="float-left font-bold">
+          <a
+            href="https://github.com/lkwg82/covid19.barnim"
+            target="https://github.com/lkwg82/covid19.barnim"
+            >Über diese Seite</a
+          >
+        </p>
+        <p class="float-right">Zuletzt aktualisiert #GeradeEben#</p>
+      </div>
     </footer>
   </div>
 </template>
